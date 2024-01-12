@@ -18,17 +18,18 @@ public class SendEmailTest extends CommonConditions {
     private static final String BODY = "Message Body";
     private static final String SUBJECT = "Message script";
     private static final String RECIPIENT = "olenaotest@gmail.com";
-    private static final String URL = "https://accounts.google.com/v3/signin/identifier?dsh=S-2013150678%3A1681917281681000&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AQMjQ7Q-PoFk6chKa8ZqDP26RRfBQcV6uu7-BXwoq6EjmrXJANCLsifjG2KvylpNlLvrLSEW0CNgOw&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
+    private static final String url = "https://accounts.google.com/v3/signin/identifier?dsh=S-2013150678%3A1681917281681000&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=AQMjQ7Q-PoFk6chKa8ZqDP26RRfBQcV6uu7-BXwoq6EjmrXJANCLsifjG2KvylpNlLvrLSEW0CNgOw&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
 
 
     @Test
     public void testAllFlow() throws MalformedURLException {
-        //  setUp();
+       //   setUp();
         Email email = new Email(RECIPIENT, SUBJECT, BODY);
         //   driver.get(url);
         JavascriptExecutor js = (JavascriptExecutor) DriverSingleton.getDriver();
-        js.executeScript("window.location =\"" + URL + "\"");
-        LoginPage loginPage = new LoginPage(driver);
+        //DriverSingleton.getDriver().get(URL);
+        js.executeScript("window.location =\"" + url + "\"");
+        LoginPage loginPage = new LoginPage(DriverSingleton.getDriver());
         ComposePage composePage = loginPage.loginUser(getFactoryUser(true).createUser());
         Assert.assertTrue(LoginUtil.isUserLogin(composePage));
         FillEmailPage fillEmailPage = composePage.compose();

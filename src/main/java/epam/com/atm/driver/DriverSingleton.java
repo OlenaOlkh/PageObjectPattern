@@ -28,7 +28,7 @@ public class DriverSingleton {
         // caps.setBrowserName("chrome");
         if (null == driver) {
             switch (System.getProperty("browser"))
-                /*  switch (System.getProperty("browser"))*/ {
+                 {
                 case "chrome":
                     // WebDriverManager.chromedriver().setup();
                     //   WebDriverManager.chromedriver().clearDriverCache().setup();
@@ -56,8 +56,8 @@ public class DriverSingleton {
                     break;
                 default:
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                   // driver = new EnhancedWebDriverDecorator(new ChromeDriver())
+                   // driver = new ChromeDriver();
+                    driver = new EnhancedWebDriverDecorator(new ChromeDriver())
                     {
                     };
                     break;
@@ -67,10 +67,10 @@ public class DriverSingleton {
         driver.manage().window().maximize();
         return driver;
     }
-    /*public static void closeDriver() {
+    public static void closeDriver() {
         driver.quit();
         driver = null;
-    }*/
+    }
 }
 
 //Чтобы создать паттерн Декоратор с логированием в вашем коде, следуйте этим шагам:

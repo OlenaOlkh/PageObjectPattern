@@ -1,4 +1,4 @@
-package epam.com.atm.model;
+package epam.com.atm.model.user;
 
 
 import epam.com.atm.service.ITestDataReader;

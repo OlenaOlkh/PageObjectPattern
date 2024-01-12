@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-import static epam.com.atm.test.CommonConditions.driver;
-
 public class MyTest extends CommonConditions{
 UserCreator creator;
 
@@ -23,7 +21,7 @@ UserCreator creator;
  }
 
     @Test
-    public void invcalidLogin() throws MalformedURLException {
+    public void invalidLogin() throws MalformedURLException {
     LoginPage login = new LoginPage(driver);
     login.loginUser((User) creator);
     }

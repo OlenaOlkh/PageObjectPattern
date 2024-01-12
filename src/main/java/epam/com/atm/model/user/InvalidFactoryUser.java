@@ -1,4 +1,6 @@
-package epam.com.atm.model;
+package epam.com.atm.model.user;
+
+import epam.com.atm.model.user.FactoryUser;
 
 public class InvalidFactoryUser extends FactoryUser {
     private static final String TESTDATA_USER_NAME = "testdata.user.name";

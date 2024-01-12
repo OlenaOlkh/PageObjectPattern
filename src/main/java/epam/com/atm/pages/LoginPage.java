@@ -1,7 +1,7 @@
 package epam.com.atm.pages;
 
 import epam.com.atm.driver.DriverSingleton;
-import epam.com.atm.model.User;
+import epam.com.atm.model.user.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 import org.openqa.selenium.By;
@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
+
 
 public class LoginPage extends BasePage {
     public By inputUserName = By.xpath("//input[@id='identifierId']");

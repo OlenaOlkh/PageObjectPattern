@@ -1,10 +1,12 @@
 package epam.com.atm.test;
 
-import epam.com.atm.model.FactoryUser;
-import epam.com.atm.model.InvalidFactoryUser;
-import epam.com.atm.model.ValidFactoryUser;
+import epam.com.atm.driver.DriverSingleton;
+import epam.com.atm.model.user.FactoryUser;
+import epam.com.atm.model.user.InvalidFactoryUser;
+import epam.com.atm.model.user.ValidFactoryUser;
 import epam.com.atm.util.TestListener;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 
@@ -20,11 +22,11 @@ public class CommonConditions {
         driver = getDriver();
     }
 
-    /* @AfterTest
+     @AfterTest
      public void afterTest() {
          System.out.println("TearDown");
          DriverSingleton.closeDriver();
-     }*/
+     }
     public FactoryUser getFactoryUser(boolean isValid) {
 
         if (isValid) {

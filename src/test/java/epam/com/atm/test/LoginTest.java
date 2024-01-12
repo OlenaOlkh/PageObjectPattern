@@ -23,13 +23,14 @@ public class LoginTest extends CommonConditions {
     @Test
     public void login() throws MalformedURLException {
         JavascriptExecutor js = (JavascriptExecutor) DriverSingleton.getDriver();
+       // DriverSingleton.getDriver().get(url);
         js.executeScript("window.location =\"" + url + "\"");
         LoginPage loginPage = new LoginPage(DriverSingleton.getDriver());
         ComposePage composePage = loginPage.loginUser(getFactoryUser(true).createUser());
         Assert.assertTrue(LoginUtil.isUserLogin(composePage));
 
     }
-    public static WebDriver getDriver() throws MalformedURLException {
+    /*public static WebDriver getDriver() throws MalformedURLException {
         return DriverSingleton.getDriver();
-    }
+    }*/
 }
