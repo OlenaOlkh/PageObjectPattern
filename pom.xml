@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <xmlsuite>src/test/resources/testng-smoke_.xml</xmlsuite>
   </properties>
 
   <dependencies>
@@ -111,6 +112,7 @@
         <configuration>
           <suiteXmlFiles>
             <!--suppress UnresolvedMavenProperty -->
+            <!--src/test/resources/testng-smoke.xml -->
             <file>${xmlsuite}</file>
           </suiteXmlFiles>
         </configuration>

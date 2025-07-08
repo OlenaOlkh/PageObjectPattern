@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 import java.time.Duration;
 
-
+// mvn clean test -Dbrowser=chrome -Denvironment=stage
 public class LoginPage extends BasePage {
     public By inputUserName = By.xpath("//input[@id='identifierId']");
     public By inputPassword = By.xpath("//input[@type='password']");
