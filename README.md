@@ -40,7 +40,7 @@ PageObjectPattern/
 ## Author
 
 **Olena Olkhovska**  
-QA Automation Engineer with 17+ years of experience  
+QA Automation Engineer   
 Berlin, Germany  
 LinkedIn: https://www.linkedin.com/in/olena-olkhovska/
 
